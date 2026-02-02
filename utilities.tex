@@ -22,5 +22,17 @@
 {|}{{#2}|{#3}|{#4}|{#5}}
 }
 
-\def\sett#1#2#3{\expandafter\def\csname#1#2\endcsname{#3}}
-% \def\appnd#1#2#3{\expandafter\def\csname#1#2\endcsname{#3}}
+\newcommand{\MultiPosExpTemplate}[5]
+{
+\DefineArrayVar{#1}{@}
+{|}{Company|Location|Highlights}
+{|}{{#2}|{#3}|{#5}}
+#4
+}
+
+\newcommand{\SubExpTemplate}[5]
+{
+\DefineArrayVar{#1}{@}
+{|}{Start|End|Designation|Highlights}
+{|}{{#2}|{#3}|{#4}|{#5}}
+}
