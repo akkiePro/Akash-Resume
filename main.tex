@@ -134,35 +134,65 @@
 \begin{document}
 \titlesection
 \vspace{1pt}
-\section{Career summary so far}
+\section{Professional Summary}
 \profileSummary
 
 % ===================== SKILLS =====================
 \section*{Technical Skills}
 
-\textbf{Languages:} Java, Groovy, JavaScript, C\#, Python\\
-\textbf{Backend Frameworks:} Spring Boot, Micronaut, Grails\\
+\textbf{Languages:} Java, Groovy, JavaScript, TypeScript, C\#, Python\\
+\textbf{Backend Frameworks:} Spring Boot, Micronaut, Grails, EJB, Hibernate, ORM\\
 \textbf{Frontend:} React, Next.js, Vite, HTML, CSS (Vanilla CSS)\\
-\textbf{Databases:} MySQL, Amazon Aurora MySQL, MongoDB\\
+\textbf{Databases \& Caching:} MySQL, Amazon Aurora MySQL, MongoDB, Couchbase, Memcached\\
 \textbf{Search Technologies:} Apache Solr 8.x, AWS OpenSearch\\
-\textbf{Cloud \& DevOps:} AWS ECS, EC2, ECR, CloudWatch, AWS DMS, Docker\\
-\textbf{Messaging \& Streaming:} Apache Kafka (learning and implementation projects)\\
-\textbf{Tools \& Practices:} Git, CI/CD Pipelines, REST APIs, Microservices, Cost Optimization, Performance Tuning\\
-\textbf{Concepts:} Distributed Systems, JVM Memory Management, Multithreading, Pagination, Search Indexing, SEO Optimization
+\textbf{Authentication \& Security:} OAuth 2.0, JWT Authentication, Google SSO\\
+\textbf{API \& Documentation: } REST APIs, Swagger (OpenAPI Specification), JavaDocs\\
+\textbf{Testing: } Unit Testing (JUnit, Mockito, PowerMockRunner, JMockit)\\
+\textbf{Build \& Dependency Management: } Maven, Gradle, Ant\\
+\textbf{Cloud \& DevOps:} AWS ECS, EC2, ECR, CloudWatch, AWS DMS, Docker, Jenkins, Azure\\
+\textbf{Messaging \& Streaming:} Apache Kafka, ZooKeeper, RabbitMQ, HornetQ, ActiveMQ (learning and implementation projects)\\
+\textbf{Service Discovery \& Configuration: } Eureka, Consul\\
+\textbf{Tools \& Practices:} Git, CI/CD Pipelines, Microservices, Cost Optimization, Performance Tuning\\
+\textbf{Concepts:} OOP (OOPs Concepts), Distributed Systems, JVM Memory Management, Multithreading, Pagination, Search Indexing, Search Engine Optimization (SEO)
 
 
 \newcommand{\renderExp}[1]{
 \resumeSubheading
-      {\csname #1@Company\endcsname}{\csname #1@Start\endcsname \ -- \csname #1@End\endcsname}
-      {\csname #1@Designation\endcsname}{\csname #1@Location\endcsname}
-      \csname #1@Highlights\endcsname
+  {\csname #1@Company\endcsname}
+  {\csname #1@Start\endcsname \ -- \csname #1@End\endcsname}
+  {\csname #1@Designation\endcsname}
+  {\csname #1@Location\endcsname}
+
+\csname #1@Highlights\endcsname
+
+\ifcsname #11@Designation\endcsname
+  \resumeSubSubheading
+    {\csname #11@Designation\endcsname}
+    {\csname #11@Start\endcsname \ -- \csname #11@End\endcsname}
+  \csname #11@Highlights\endcsname
+\fi
+
+\ifcsname #12@Designation\endcsname
+  \resumeSubSubheading
+    {\csname #12@Designation\endcsname}
+    {\csname #12@Start\endcsname \ -- \csname #12@End\endcsname}
+  \csname #12@Highlights\endcsname
+\fi
+
+\ifcsname #13@Designation\endcsname
+  \resumeSubSubheading
+    {\csname #13@Designation\endcsname}
+    {\csname #13@Start\endcsname \ -- \csname #13@End\endcsname}
+  \csname #13@Highlights\endcsname
+\fi
 }
+
 
 \section{Experience}
     \resumeSubHeadingListStart
         \renderExp{VNH}
+        \vspace{20pt}
         \renderExp{Asite}
-        % \renderExp{GS}  
   \resumeSubHeadingListEnd
 % \vspace{-16pt}
 
